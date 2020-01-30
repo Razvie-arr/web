@@ -1,0 +1,47 @@
+<html>
+<head>
+<HEAD>
+  <script>
+
+    function swap(aForm)
+    {
+      var i = aForm.picture.selectedIndex
+      var j = aForm.frame.selectedIndex
+
+      if(i == 0) top.frames[j].location="r1.html"
+      if(i == 1) top.frames[j].location="r2.html"
+      if(i == 2) top.frames[j].location="r3.html"
+      if(i == 3) top.frames[j].location="r4.html"
+
+    }
+
+  </script>
+ </HEAD>
+
+<body BGCOLOR=white STYLE="font-family:ARIAL BLACK">
+	<font size=3>
+	<p align=center>Выбирайте элемент:</p>
+	<form align=center>
+		<p align=center>Номер картинки:</p>
+		<select name="picture" align=center>
+			<option SELECTED> 1
+			<option> 2
+			<option> 3
+			<option> 4
+			<br>
+		</select>
+		<p align=center>Номер фрейма:</p>
+		<select name="frame">
+			<option SELECTED> 1
+			<option> 2
+			<option> 3
+			<option> 4	
+		</select>
+		<br>
+		<br>
+		<input type="button" value="Работай" onclick="swap(this.form)">
+		</font>
+	</form>
+
+</body>
+</html>

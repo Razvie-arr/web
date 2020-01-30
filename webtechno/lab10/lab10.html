@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>
+ЛАБОРАТОРНАЯ 10
+</title>
+</head>
+<SCRIPT>
+delay = 100
+imageNum = 1 // стартовый номер картинки
+theImages = new Array()
+for(i = 1; i < 11; i++) {
+   theImages[i] = new Image()
+   theImages[i].src = "s" + i + ".gif"
+   }
+function animate() {
+   document.animation.src = theImages[imageNum].src
+   imageNum++;   
+   if(imageNum > 10) {
+   imageNum = 1
+   }
+}
+function slower() {
+   delay+=10
+   if(delay > 4000) delay = 4000
+}
+function faster() {
+   delay-=10
+   if(delay < 0) delay = 0
+}
+function stop()
+{
+	imageNum=13
+
+
+}
+function start()
+{	
+	window.location.reload();
+}
+</SCRIPT>
+<BODY BGCOLOR="white">
+ <IMG NAME="animation" SRC="s1.gif" ALT="[Анимация]" 
+onLoad="setTimeout('animate()', delay)">  
+<FORM>  
+<INPUT TYPE="button" Value="Slower" onClick="slower()">
+<INPUT TYPE="button" Value="Faster" onClick="faster()">
+<INPUT TYPE="button" Value="Start" onClick="start()">
+<INPUT TYPE="button" Value="Stop" onClick="stop()">
+</FORM>
+</BODY>
+</html>
