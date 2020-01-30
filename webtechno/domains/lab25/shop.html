@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Выбор товара</title>
+</head>
+
+<body>
+	<form action="add_goods.php" method="post">
+		<h3> Выберите товары: </h3>
+		<p> <select name="goods" size="8">
+			<option value="g1">Мастер и Маргарита (Михаил Булгаков)</option>
+			<option value="g2">1984 (Джордж Оруэлл)</option>
+			<option value="g3">Мартин Иден (Джек Лондон)</option>
+			<option value="g4">Сто лет одиночества (Габриэль Гарсиа Маркес)</option>
+			<option value="g5">Сага о Ведьмаке (Анджей Сапковский)</option>
+			<option value="g6">451 градус по Фаренгейту (Рэй Брэдбери)</option>
+			<option value="g7">Автостопом по галактике (Дуглас Адамс)</option>
+			<option value="g8">inDriver: от Якутска до Кремниевой долины (Арсен Томский)</option>
+		</select> </p>
+		<p> <input type="submit" name="button" value="Добавить">
+		<?php
+			echo "<p><a href='/basket.php'>Корзина(" . $num_goods . ")</a></p>";
+		?>
+	</form>
+
+</body>
+
+</html>
